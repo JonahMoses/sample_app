@@ -1,9 +1,16 @@
 SampleApp::Application.routes.draw do
-  get "static_pages/..."
-
+  
   get "static_pages/home"
 
   get "static_pages/help"
+
+  resources :static_pages do
+    get "index"
+
+    get "home"
+
+    get "help"
+end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
